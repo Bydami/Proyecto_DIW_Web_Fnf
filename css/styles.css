@@ -305,10 +305,6 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
-#gif_pico{
-    transform: scaleX(-1);
-}
-
 /* Estilos solo para el desarrollo */
 
 .auxiliar {
@@ -398,7 +394,7 @@ button:hover {
 /* Small: ≥576px */
 @media (max-width: 768px) {
     #gif_pico {
-        transform: scale(0.8) scaleX(-1);
+        transform: scale(0.8);
     }
 
     #gif_boyfriend {
