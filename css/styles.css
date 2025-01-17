@@ -25,6 +25,7 @@ h2 {
     font-weight: 400px;
     font-size: 22px;
     color: #ffffff;
+    margin: 0;
     text-shadow: 
         2px 2px 0px #000,
         -2px 2px 0px #000,
@@ -251,7 +252,7 @@ a:hover{
 .div_titulo {
     margin-top: 30px;
     background-color: #E336FF;
-    width: 15%;
+    width: 250px;
     padding: 6px 16px;
     color: #ffffff;
     position: relative;
@@ -301,6 +302,7 @@ footer {
 #gif_pico, #gif_boyfriend{
     width: 160px;
     height: 160px;
+    transition: all 0.3s ease-in-out;
 }
 
 #gif_pico{
@@ -315,4 +317,96 @@ footer {
 
 .mega_texto {
     font-size: 50px;
+}
+
+/* Estilos del formulario */
+
+input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    border-radius: 0 100px 100px 0;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #32bcdb;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #32bcdb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100px 0 0 100px;
+}
+
+button:hover {
+    background-color: #2589a0;
+}
+
+/* Media Queries */
+
+/* Extra large: ≥1200px */
+@media (max-width: 1400px) {
+
+}
+
+/* Large: ≥992px */
+@media (max-width: 1200px) {
+    .video_gifs {
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "video video"
+            "gif1 gif2";
+    }
+
+    #video_tuto {
+        grid-area: video;
+        width: 100%;
+    }
+
+    #gif_pico {
+        grid-area: gif1;
+    }
+
+    #gif_boyfriend {
+        grid-area: gif2;
+    }
+}
+
+/* Medium: ≥768px */
+@media (max-width: 992px) {
+    input[type="text"] {
+        display: none;
+    }
+
+    button {
+        border-radius: 100px;
+    }
+}
+
+/* Small: ≥576px */
+@media (max-width: 768px) {
+    #gif_pico {
+        transform: scale(0.8) scaleX(-1);
+    }
+
+    #gif_boyfriend {
+        transform: scale(0.8);
+    }
+}
+
+/* Extra small: <576px */
+@media (max-width: 576px) {
+
 }
