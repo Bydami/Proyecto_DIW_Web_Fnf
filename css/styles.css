@@ -113,6 +113,35 @@ li{
     transition: all 0.2s ease;
 }
 
+.menu-btn {
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    top: 40%;
+    width: 60px;
+    height: 100px;
+    background-color: #E336FF;
+    padding: 20px 0 20px 0;
+    overflow-y: hidden;
+    box-shadow: 0 0 20px 1px black;
+    border-radius: 100px 0 0 100px;
+    transition: all 0.2s ease-in-out;
+    display: none;
+}
+
+.menu-btn:hover {
+    background-color: #b528ca;
+}
+
+.menu-btn-active {
+    transform: translateX(-300%);
+}
+
+.active {
+    transform: translateX(0);
+    box-shadow: 0 0 20px 1px black;
+}
+
 /* Estilo hover de enlaces del menú */
 li:hover{
     transform: scale(1.1);
@@ -348,12 +377,12 @@ button:hover {
 
 /* Media Queries */
 
-/* Extra large: ≥1200px */
+/* Extra large */
 @media (max-width: 1400px) {
 
 }
 
-/* Large: ≥992px */
+/* Large */
 @media (max-width: 1200px) {
     .video_gifs {
         gap: 20px;
@@ -380,7 +409,7 @@ button:hover {
     }
 }
 
-/* Medium: ≥768px */
+/* Medium */
 @media (max-width: 992px) {
     input[type="text"] {
         display: none;
@@ -391,18 +420,49 @@ button:hover {
     }
 }
 
-/* Small: ≥576px */
+/* Small */
 @media (max-width: 768px) {
-    #gif_pico {
-        transform: scale(0.8);
+    aside {
+        transform: translateX(100%);
+        box-shadow: 0 0 0 0 black;
     }
-
-    #gif_boyfriend {
-        transform: scale(0.8);
+    .menu-btn {
+        display: block;
+    }
+    .sub_main {
+        margin-right: 0;
+    }
+    header{
+        width: 90%;
+    }
+    footer{
+        width: 90%;
+        padding: 10px 10px 10px 60px;
     }
 }
 
-/* Extra small: <576px */
+/* Extra small */
 @media (max-width: 576px) {
-
+    header{
+        width: 100%;
+        h1 {
+            font-size: 35px;
+        }
+    }
+    footer{
+        width: 100%;
+        padding: 10px 10px 10px 40px;
+        h3 {
+            display: none;
+        }
+    }
+    #gif_pico {
+        transform: scale(0.8);
+    }
+    #gif_boyfriend {
+        transform: scale(0.8);
+    }
+    .video_gifs {
+        justify-content: center;
+    }
 }
