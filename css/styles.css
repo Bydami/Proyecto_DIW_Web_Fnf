@@ -111,6 +111,7 @@ li{
         1px -1px 0px #000,
         -1px -1px 0px #000;
     transition: all 0.2s ease;
+    text-align: center;
 }
 
 .menu-btn {
@@ -137,14 +138,46 @@ li{
     transform: translateX(-300%);
 }
 
-.active {
+.active-menu {
     transform: translateX(0);
     box-shadow: 0 0 20px 1px black;
 }
 
 /* Estilo hover de enlaces del menú */
-li:hover{
+li:hover a:nth-of-type(2) {
+    color: #32bcdb;
     transform: scale(1.1);
+    display: inline-block;
+}
+
+li:hover img {
+    animation: float 1.5s infinite ease-in-out;
+}
+
+li:hover .bf {
+    content: url('../img/icon/bf/bf_on.png');
+}
+
+li:hover .mum {
+    content: url('../img/icon/mum/mum_on.png');
+}
+
+li:hover .bil {
+    content: url('../img/icon/bil/bil_on.png');
+}
+
+li:hover .tank {
+    content: url('../img/icon/tank/tank_on.png');
+}
+
+li:hover .mon {
+    content: url('../img/icon/mon/mon_on.png');
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
 
 a{
@@ -153,13 +186,13 @@ a{
     transition: all 0.2s ease;
 }
 
-.selected > a{
+.selected{
     color: #32bcdb;
 }
 
-a:hover{
+/* a:hover{
     color: #32bcdb;
-}
+} */
 
 /* Estilos del main y subelementos */
 
@@ -214,6 +247,7 @@ a:hover{
     border-radius: 20px;
 }
 
+/* Carrusel */
 .carrusel{
     margin: 20px 0;
     width: 100%;
@@ -221,6 +255,29 @@ a:hover{
     background-color: #32bcdb;
     border-radius: 90px;
     border: 6px #E336FF solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* .carrusel-item{
+    display: block
+} */
+
+.carrusel-item > img{
+    border-radius: 20px;
+}
+
+.carrusel > h2{
+    font-size: 40px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 120px;
+    img {
+        width: 100px;
+    }
 }
 
 /* Página de mods */
@@ -254,9 +311,9 @@ a:hover{
 .div_icon_home {
     background-color: #E336FF;
     left: 10px; 
-    top: 13%; 
-    width: 60px;
-    height: 60px; 
+    top: 120px; 
+    width: 65px;
+    height: 65px; 
     color: #000000;
     overflow: hidden;
     border-radius: 100px;
@@ -450,6 +507,9 @@ form > button:hover {
         h1 {
             font-size: 35px;
         }
+    }
+    .logo {
+        width: 60px;
     }
     footer{
         width: 100%;

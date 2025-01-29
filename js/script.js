@@ -26,6 +26,6 @@ const observer = new IntersectionObserver(
 observer.observe(footer);
 
 function toggleMenu() {
-  aside.classList.toggle("active");
+  aside.classList.toggle("active-menu");
   menu_btn.classList.toggle("menu-btn-active");
 }
