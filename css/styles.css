@@ -211,17 +211,14 @@ a{
     text-align: center;
 }
 
-.sub_main_pages p{
+.linea_rosa{
     text-align: center;
     width: 60%;
-}
-
-.sub_main_pages > p {
     margin: 10px 0;
     position: relative;
 }
 
-.sub_main_pages > p::before {
+.linea_rosa::before {
     content: '';
     display: block;
     width: 100%;
@@ -391,6 +388,12 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
+.foto_ejemplo {
+    width: 70%;
+    border: 8px solid #E336FF;
+    border-radius: 30px;
+}
+
 /* Estilos solo para el desarrollo */
 
 .auxiliar {
@@ -427,14 +430,21 @@ button {
     transition: all 0.3s;
 }
 
-form > button {
+/* button {
     border-radius: 100px 0 0 100px;
 }
 
-form > button:hover {
+button:hover {
     background-color: #2589a0;
+} */
+
+.button_buscador {
+    border-radius: 100px 0 0 100px;
 }
 
+.button_buscador:hover {
+    background-color: #2589a0;
+}
 /* Media Queries */
 
 /* Extra large */
@@ -474,8 +484,12 @@ form > button:hover {
     input[type="text"] {
         display: none;
     }
-    form > button {
+    .button_buscador {
         border-radius: 100px;
+    }
+    .foto_ejemplo{
+        width: 90%;
+        border: 6px solid #E336FF;
     }
 }
 
@@ -505,8 +519,12 @@ form > button:hover {
     header{
         width: 100%;
         h1 {
-            font-size: 35px;
+            font-size: 30px;
+            margin-right: 7px;
         }
+    }
+    .button_buscador {
+        padding: 4px 10px;
     }
     .logo {
         width: 60px;
@@ -526,5 +544,24 @@ form > button:hover {
     }
     .video_gifs {
         justify-content: center;
+    }
+    .div_icon_home {
+        left: 10px; 
+        top: 105px; 
+        width: 50px;
+        height: 50px;
+        i {
+            font-size: 35px;
+        }
+    }
+    .div_titulo_pagina{
+        transform: scale(0.9);
+        h2 {
+            font-size: 30px;
+        }
+    }
+    .foto_ejemplo{
+        width: 100%;
+        border: 3px solid #E336FF;
     }
 }
