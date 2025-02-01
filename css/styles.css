@@ -54,6 +54,10 @@ p {
     text-align: justify;
 }
 
+.creador {
+    font-size: 25px;
+}
+
 /* Estilo cabecera */
 header {
     display: flex;
@@ -213,7 +217,7 @@ a{
 
 .linea_rosa{
     text-align: center;
-    width: 60%;
+    width: 70%;
     margin: 10px 0;
     position: relative;
 }
@@ -271,9 +275,9 @@ a{
 }
 
 .carousel-control-next, .carousel-control-prev {
-    width: 120px;
+    width: 250px;
     img {
-        width: 100px;
+        width: 150px;
     }
 }
 
@@ -341,6 +345,18 @@ a{
     position: relative;
     overflow: hidden;
     border-radius: 0 100px 100px 0;
+    animation: leftAnimation 1s ease-out;
+}
+
+@keyframes leftAnimation {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .div_titulo_pagina {
@@ -352,6 +368,7 @@ a{
     border-radius: 100px;
     text-align: center;
     margin: 0 auto 20px auto;
+    
 }
 
 .div_titulo_pagina h2{
@@ -464,18 +481,24 @@ button:hover {
             "video video"
             "gif1 gif2";
     }
-
     #video_tuto {
         grid-area: video;
         width: 100%;
     }
-
     #gif_pico {
         grid-area: gif1;
     }
-
     #gif_boyfriend {
         grid-area: gif2;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 150px;
+        img {
+            width: 100px;
+        }
+    }
+    .linea_rosa{
+        width: 80%;
     }
 }
 
@@ -490,6 +513,15 @@ button:hover {
     .foto_ejemplo{
         width: 90%;
         border: 6px solid #E336FF;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 110px;
+        img {
+            width: 100px;
+        }
+    }
+    .linea_rosa{
+        width: 90%;
     }
 }
 
@@ -511,6 +543,19 @@ button:hover {
     footer{
         width: 90%;
         padding: 10px 10px 10px 60px;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 150px;
+        img {
+            width: 100px;
+        }
+    }
+    .carrusel-item > img{
+        margin-top: 30px;
+        width: 180px;
+    }
+    .linea_rosa{
+        width: 80%;
     }
 }
 
@@ -563,5 +608,15 @@ button:hover {
     .foto_ejemplo{
         width: 100%;
         border: 3px solid #E336FF;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        display: none;
+    }
+    .carrusel-item > img{
+        margin-top: 30px;
+        width: 180px;
+    }
+    .tier_image{
+        width: 300px;
     }
 }
