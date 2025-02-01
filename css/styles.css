@@ -54,7 +54,7 @@ p {
     text-align: justify;
 }
 
-.creador {
+.creador-font {
     font-size: 25px;
 }
 
@@ -308,6 +308,38 @@ a{
     border-radius: 20px;
 }
 
+/* Página de creadores */
+
+.main_creador {
+    display: flex;
+    flex-direction: column;
+}
+
+.creador {
+    display: flex;
+    align-items: center;
+    p{
+        margin-left: 20px;
+    }
+}
+
+.imagen-creador {
+    width: 180px;
+    border-radius: 20px;
+}
+
+.iconos-redes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 30px;
+    img {
+        width: 40px;
+    }
+}
+
 /* Estilo icono de home */
 .div_icon_home {
     background-color: #E336FF;
@@ -374,6 +406,49 @@ a{
 .div_titulo_pagina h2{
     font-size: 30px;
 }
+
+/* Página de juego */
+
+.videos_games {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#video_game {
+    width: 700px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.boton_apoyar {
+    background: #E336FF;
+    border: none;
+    border-radius: 35px;
+    padding: 12px 24px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(227, 54, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.boton_apoyar:hover {
+    background: #F450FF;
+    box-shadow: 0 6px 20px rgba(227, 54, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.boton_apoyar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(227, 54, 255, 0.4);
+}
+
 
 /* Estilo pie de página */
 footer {
@@ -523,6 +598,10 @@ button:hover {
     .linea_rosa{
         width: 90%;
     }
+    #video_game {
+        width: 455px;
+        height: 260px;
+    }
 }
 
 /* Small */
@@ -556,6 +635,20 @@ button:hover {
     }
     .linea_rosa{
         width: 80%;
+    }
+    .creador {
+        flex-direction: column;
+        order: 2;
+        gap: 20px;
+        p{
+            margin-left: 0;
+        }
+    }
+    
+    .iconos-redes {
+        justify-content: center;
+        margin-bottom: 20px;
+        order: 1;
     }
 }
 
@@ -618,5 +711,9 @@ button:hover {
     }
     .tier_image{
         width: 300px;
+    }
+    #video_game {
+        width: 280px;
+        height: 160px;
     }
 }

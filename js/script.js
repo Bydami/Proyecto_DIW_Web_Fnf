@@ -26,3 +26,8 @@ function toggleMenu() {
   aside.classList.toggle("active-menu");
   menu_btn.classList.toggle("menu-btn-active");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let audio = document.getElementById("musica");
+  audio.volume = 0.4;
+});
