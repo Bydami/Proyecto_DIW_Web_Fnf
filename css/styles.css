@@ -1,4 +1,5 @@
 /* Estilo general */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
 }
 
 /* Estilo fuentes */
+
 h1 {
     font-family: "Titan One", serif;
     font-weight: 400;
@@ -59,6 +61,7 @@ p {
 }
 
 /* Estilo cabecera */
+
 header {
     display: flex;
     align-items: center;
@@ -75,6 +78,7 @@ header h1{
 }
 
 /* Estilo menú lateral */
+
 aside {
     position: fixed;
     z-index: 10;
@@ -148,6 +152,7 @@ li{
 }
 
 /* Estilo hover de enlaces del menú */
+
 li:hover a:nth-of-type(2) {
     color: #32bcdb;
     transform: scale(1.1);
@@ -194,13 +199,10 @@ a{
     color: #32bcdb;
 }
 
-/* a:hover{
-    color: #32bcdb;
-} */
-
 /* Estilos del main y subelementos */
 
 /* Página principal */
+
 .sub_main {
     margin-right: 200px;
     padding: 25px 50px 25px 50px;
@@ -249,6 +251,7 @@ a{
 }
 
 /* Carrusel */
+
 .carrusel{
     margin: 20px 0;
     width: 100%;
@@ -261,10 +264,6 @@ a{
     flex-direction: column;
     gap: 20px;
 }
-
-/* .carrusel-item{
-    display: block
-} */
 
 .carrusel-item > img{
     border-radius: 20px;
@@ -282,6 +281,7 @@ a{
 }
 
 /* Página de mods */
+
 .element_tier {
     display: flex;
     flex-direction: row;
@@ -480,10 +480,76 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
+#gif_boyfriend_dow{
+    width: 170px;
+    transition: all 0.3s ease-in-out;
+}
+
+#gif_spoky {
+    width: 210px;
+    transition: all 0.3s ease-in-out;
+}
+
+#gif_girlfrined {
+    width: 290px;
+    transition: all 0.3s ease-in-out;
+}
+
 .foto_ejemplo {
     width: 70%;
     border: 8px solid #E336FF;
     border-radius: 30px;
+}
+
+/* Página de descarga */
+
+.descarga_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.flechas_main {
+    display: flex;
+    gap: 20px;
+}
+
+.fle_izq, .fle_aba, .fle_arr, .fle_der {
+    transition: all 0.2s ease-in-out;
+}
+
+.fle_izq:hover {
+    content: url('../img/flechas/left-hover.png');
+}
+.fle_izq:active {
+    content: url('../img/flechas/left-click.png');
+    transform: scale(1.1);
+}
+
+.fle_aba:hover {
+    content: url('../img/flechas/down-hover.png');
+}
+.fle_aba:active {
+    content: url('../img/flechas/down-click.png');
+    transform: scale(1.1);
+}
+
+.fle_arr:hover {
+    content: url('../img/flechas/up-hover.png');
+}
+.fle_arr:active {
+    content: url('../img/flechas/up-click.png');
+    transform: scale(1.1);
+}
+
+.fle_der:hover {
+    content: url('../img/flechas/right-hover.png');
+}
+.fle_der:active {
+    content: url('../img/flechas/right-click.png');
+    transform: scale(1.1);
 }
 
 /* Estilos solo para el desarrollo */
@@ -522,14 +588,6 @@ button {
     transition: all 0.3s;
 }
 
-/* button {
-    border-radius: 100px 0 0 100px;
-}
-
-button:hover {
-    background-color: #2589a0;
-} */
-
 .button_buscador {
     border-radius: 100px 0 0 100px;
 }
@@ -537,12 +595,8 @@ button:hover {
 .button_buscador:hover {
     background-color: #2589a0;
 }
+
 /* Media Queries */
-
-/* Extra large */
-@media (max-width: 1400px) {
-
-}
 
 /* Large */
 @media (max-width: 1200px) {
@@ -556,22 +610,27 @@ button:hover {
             "video video"
             "gif1 gif2";
     }
+
     #video_tuto {
         grid-area: video;
         width: 100%;
     }
+
     #gif_pico {
         grid-area: gif1;
     }
+
     #gif_boyfriend {
         grid-area: gif2;
     }
+
     .carousel-control-next, .carousel-control-prev {
         width: 150px;
         img {
             width: 100px;
         }
     }
+
     .linea_rosa{
         width: 80%;
     }
@@ -582,25 +641,53 @@ button:hover {
     input[type="text"] {
         display: none;
     }
+
     .button_buscador {
         border-radius: 100px;
     }
+
     .foto_ejemplo{
         width: 90%;
         border: 6px solid #E336FF;
     }
+
     .carousel-control-next, .carousel-control-prev {
         width: 110px;
         img {
             width: 100px;
         }
     }
+
     .linea_rosa{
         width: 90%;
     }
+
     #video_game {
         width: 455px;
         height: 260px;
+    }
+
+    .descarga_main {
+        gap: 20px;
+        justify-items: center;
+        align-items: end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "gif2 gif3"
+        "gif1 gif1"
+    }
+
+    #gif_boyfriend_dow{
+        grid-area: gif3;
+    }
+    
+    #gif_spoky {
+        grid-area: gif2;
+    }
+    
+    #gif_girlfrined {
+        grid-area: gif1;
     }
 }
 
@@ -610,32 +697,40 @@ button:hover {
         transform: translateX(100%);
         box-shadow: 0 0 0 0 black;
     }
+
     .menu-btn {
         display: block;
     }
+
     .sub_main, .sub_main_pages {
         margin-right: 0;
     }
+
     header{
         width: 90%;
     }
+
     footer{
         width: 90%;
         padding: 10px 10px 10px 60px;
     }
+
     .carousel-control-next, .carousel-control-prev {
         width: 150px;
         img {
             width: 100px;
         }
     }
+
     .carrusel-item > img{
         margin-top: 30px;
         width: 180px;
     }
+
     .linea_rosa{
         width: 80%;
     }
+
     .creador {
         flex-direction: column;
         order: 2;
@@ -661,12 +756,15 @@ button:hover {
             margin-right: 7px;
         }
     }
+
     .button_buscador {
         padding: 4px 10px;
     }
+
     .logo {
         width: 60px;
     }
+
     footer{
         width: 100%;
         padding: 10px 10px 10px 40px;
@@ -674,15 +772,19 @@ button:hover {
             display: none;
         }
     }
+
     #gif_pico {
         transform: scale(0.8);
     }
+
     #gif_boyfriend {
         transform: scale(0.8);
     }
+    
     .video_gifs {
         justify-content: center;
     }
+
     .div_icon_home {
         left: 10px; 
         top: 105px; 
@@ -692,28 +794,63 @@ button:hover {
             font-size: 35px;
         }
     }
+
     .div_titulo_pagina{
         transform: scale(0.9);
         h2 {
             font-size: 30px;
         }
     }
+
     .foto_ejemplo{
         width: 100%;
         border: 3px solid #E336FF;
     }
+
     .carousel-control-next, .carousel-control-prev {
         display: none;
     }
+
     .carrusel-item > img{
         margin-top: 30px;
         width: 180px;
     }
+
     .tier_image{
         width: 300px;
     }
+
     #video_game {
         width: 280px;
         height: 160px;
+    }
+
+    .descarga_main {
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "gif3"
+        "gif2"
+        "gif1"
+    }
+
+    #gif_boyfriend_dow{
+        transform: scale(0.9);
+    }
+
+    #gif_spoky {
+        transform: scale(0.9);
+    }
+
+    #gif_girlfrined {
+        transform: scale(0.8);
+    }
+
+    .flechas_main {
+        gap: 20px;
+        justify-items: center;
+        align-items: end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
